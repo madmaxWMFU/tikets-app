@@ -24,11 +24,12 @@ body {
 }
 
 .logo__link-img {
+    height: 120px;
     width: 120px;
 }
 
 .logo__link-title {
-    margin: 20px 10px 10px 10px;
+    margin: auto 10px;
     letter-spacing: 17px;
 }
 
@@ -351,6 +352,7 @@ nav.breadcrumb [aria-current="page"] {
 
 @media(max-width: 460px) {
     .logo__link-img {
+        height: 60px;
         width: 60px;
     }
 
