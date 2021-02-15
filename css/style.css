@@ -86,6 +86,7 @@ nav.breadcrumb [aria-current="page"] {
 
 .cinema-info__image {
     height: 170px;
+    width: 115px;
 }
 
 .cinema-info__description {
