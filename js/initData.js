@@ -27,6 +27,8 @@ const renderData = (data) => {
 
     data.selected.forEach((item) => {
         const seat = document.querySelector(`#seat${item.row}-${item.seat}`);
+        seat.closest('.hall__seat').classList.add('noHover');
+        seat.setAttribute("disabled", "");
         seat.nextElementSibling.classList.add(`${item.type}--active`);  
     });
 }

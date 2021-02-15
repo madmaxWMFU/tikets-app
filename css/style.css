@@ -273,6 +273,14 @@ nav.breadcrumb [aria-current="page"] {
     text-align: center;
 }
 
+.tikets__wrap-image {
+    width: 100%;
+}
+
+.noHover {
+    pointer-events: none;
+}
+
 @media(max-width: 1440px) {
     .cinema-screen {
         padding: 20px 50px;
