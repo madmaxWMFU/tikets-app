@@ -149,7 +149,7 @@ const init = async () => {
     renderData(await getData());
     createJSON();
     hall.addEventListener('click', addToCart);
-    hall.addEventListener('touchstart', addToCart);
+    hall.addEventListener('touchstart', addToCart, {capture: true});
 }
 
 window.onload = init();
