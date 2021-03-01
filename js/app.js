@@ -150,6 +150,7 @@ const createJSON = () => {
 
 const init = async () => {
     const touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+    alert(touchEvent)
     renderData(await getData());
     createJSON();
     hall.addEventListener(touchEvent, addToCart);
