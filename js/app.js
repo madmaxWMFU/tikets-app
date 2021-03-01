@@ -69,19 +69,20 @@ const deleteFromCart = (id) => {
 
 const changeSeatStatus = (seat, type) => seat.nextElementSibling.classList.toggle(`${type}--active`);
 
-const addToCart = ({target}) => {
-    if(target.classList.contains('hall__seat-data')) {
-        const data = target.dataset.value;
+const addToCart = (e) => {
+    const item = e.target;
+    if(item.classList.contains('hall__seat-data')) {
+        const data = item.dataset.value;
         const [rowTicket, seatTicket, typeTicket] = data.split('-');
         isCartEmpty()
 
-        if(target.checked) {
-            changeSeatStatus(target, typeTicket);
+        if(item.checked) {
+            changeSeatStatus(item, typeTicket);
             renderCart(data);
             addSelectedTicket(rowTicket, seatTicket, typeTicket);
             setTotalPrice();
         } else {
-            changeSeatStatus(target, typeTicket); 
+            changeSeatStatus(item, typeTicket); 
             deleteFromCart(data);
             removeSelectedTicket(rowTicket, seatTicket, typeTicket);
             setTotalPrice();
@@ -149,10 +150,12 @@ const createJSON = () => {
 }
 
 const init = async () => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+    const eventType = isMobile ? "touchstart" : "click";
     renderData(await getData());
     createJSON();
-    // hall.addEventListener('click', addToCart);
-    hall.addEventListener('click touchstart', addToCart, {capture: true});
+    hall.addEventListener(eventType, addToCart);
+    // hall.addEventListener('touchstart click', addToCart, {passive: false});
 }
 
 window.onload = init();
