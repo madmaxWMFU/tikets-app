@@ -148,15 +148,10 @@ const createJSON = () => {
     window.sessionStorage.setItem("serverData", JSON.stringify(cart));
 }
 
-const init = async () => {
-    // const touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-    // alert(touchEvent)    
+const init = async () => {  
     renderData(await getData());
     createJSON();
-    // hall.addEventListener(touchEvent, addToCart, {capture: true});
-
     hall.addEventListener('click', addToCart);
-    // hall.addEventListener('touchstart', addToCart, {capture: true});
 }
 
 window.onload = init();
