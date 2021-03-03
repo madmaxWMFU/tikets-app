@@ -1,0 +1,9 @@
+<svg id="clock2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Widget_data" transform="translate(-703.000000, -254.000000)" fill="#221F1F" fill-rule="nonzero">
+            <g id="icons8-clock_8" transform="translate(703.000000, 254.000000)">
+                <path d="M12,0 C5.382813,0 0,5.382813 0,12 C0,18.617188 5.382813,24 12,24 C18.617188,24 24,18.617188 24,12 C24,5.382813 18.617188,0 12,0 Z M12,2 C17.535156,2 22,6.464844 22,12 C22,17.535156 17.535156,22 12,22 C6.464844,22 2,17.535156 2,12 C2,6.464844 6.464844,2 12,2 Z M11,4 L11,13 L18,13 L18,11 L13,11 L13,4 L11,4 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
